@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- saved from url=(0061)file:///C:/Users/Administrator/Desktop/JULIAN/dashboard2.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="./dashboard_files/font-awesome.min.css">
+<script src="./dashboard_files/chart.js.download"></script>
+<style>
+		body{
+			background-image: ;
+		}
+
+		#lblue{
+			background-color: lightblue;
+			width: 2000px;
+			height: 100px;
+			margin-top: -10px;
+			margin-left: -10px;
+			position: static;
+		}
+
+		#prof{
+			width: 60px;
+			height: 60px;
+			float: right;
+			margin-right: 200px;
+			margin-top: 20px;
+		}
+
+		#inpt{
+			border-radius: 15px;
+			text-align: center;
+			margin-top: 40px;
+			font-size: 20px;
+			margin-left: 800px;
+			width: 400px;
+		}
+
+		#sicon{
+			width: 25px;
+			margin-left: -40px;
+			margin-bottom: -7px;
+		}
+
+		#ptext{
+			float: right;
+			margin-top: -60px;
+			margin-right: 50px;
+		}
+
+		#logo{
+			margin-left: 170px;
+			height: 120px;
+			margin-top: -80px;
+		}
+
+		.sidebar {
+		  height: 100%;
+		  width: 160px;
+		  position: fixed;
+		  z-index: 1;
+		  top: 0;
+		  left: 0;
+		  background-color: #111;
+		  overflow-x: hidden;
+		  padding-top: 16px;
+		}
+
+		.sidebar a {
+		  padding: 6px 8px 6px 16px;
+		  text-decoration: none;
+		  font-size: 20px;
+		  color: #818181;
+		  display: block;
+		}
+
+		.sidebar a:hover {
+		  color: #f1f1f1;
+		}
+
+		.main {
+		  margin-left: 160px; /* Same as the width of the sidenav */
+		  padding: 0px 10px;
+		}
+
+		@media screen and (max-height: 450px) {
+		  .sidebar {padding-top: 15px;}
+		  .sidebar a {font-size: 18px;}
+		}
+
+		#dash{
+			margin-left: 10px;
+		}
+
+		#lupad{
+			margin-left: 40px;
+		}
+
+		#tool{
+			margin-left: 25px;
+		}
+
+		#ser{
+			margin-left: 20PX;
+		}
+
+		#tao{
+			margin-left: 20px;
+		}
+
+		#cli{
+			margin-left: 25px;
+		}
+
+		#con{
+			margin-left: 25px;
+		}
+
+		#cp{
+			margin-left: 20px;
+		}
+
+		#res{
+			margin-left: 5px;
+		}
+
+		#myPieChart{
+			margin-left: 100px;
+			margin-top: 30px;
+		}
+
+		#mpc{
+			background-color: whitesmoke;
+			width: 500px;
+			margin-left: 200px;
+			height: 350px;
+			margin-top: -15px;
+			border: 5px solid #36A2EB;
+		}
+
+		h3{
+			font-size: 30px;
+			margin-left: 350px;
+			margin-top: -5px;
+		}
+
+		#ari{
+			background: linear-gradient(to left, #36A2EB, #1E90FF, #0000FF);
+			width: 300px;
+			margin-left: 800px;
+			height: 120px;
+			margin-top: -380px;
+			color: white;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: 0px 5px 35px;
+
+		}
+
+		#num{
+			font-size: 60px;
+			margin-bottom: -30px;
+
+		}
+
+		#txt{
+			font-size: 30px;
+		}
+
+		#dep{
+			background: linear-gradient(to left, #36A2EB, #1E90FF, #0000FF);
+			width: 300px;
+			margin-left: 800px;
+			height: 120px;
+			margin-top: -30px;
+			color: white;
+			text-align: center;
+			border-radius: 20px;
+			box-shadow: 0px 5px 35px;
+
+		}
+
+		#num2{
+			font-size: 60px;
+			margin-bottom: -30px;
+		}
+
+		#txt2{
+			font-size: 30px;
+		}
+</style>
+</head>
+<body>
+
+<div class="sidebar">
+	<a href="file:///C:/Users/Administrator/Desktop/JULIAN/dashboard2.html#home" id="dash">Dashboard </a>
+	<br>
+  <a href="file:///C:/Users/Administrator/Desktop/JULIAN/dashboard2.html#home" id="res"><i class="fa fa-fw fa-plane" id="lupad"></i> Reservations</a>
+  <br>
+  <a href="file:///C:/Users/Administrator/Desktop/JULIAN/dashboard2.html#services" id="ser"><i class="fa fa-fw fa-wrench" id="tool"></i><br>Services</a>
+  <br>
+  <a href="file:///C:/Users/Administrator/Desktop/JULIAN/dashboard2.html#clients" id="cli"><i class="fa fa-fw fa-user" id="tao"></i><br> For You </a>
+  <br>
+  <a href="file:///C:/Users/Administrator/Desktop/JULIAN/dashboard2.html#contact" id="con"><i class="fa fa-fw fa-envelope" id="cp"></i><br> Contact</a>
+</div>
+
+
+ 	<div id="lblue">
+ 		<img src="./dashboard_files/profile.png" id="prof">
+ 		<div>
+ 			<input type="text" id="inpt" placeholder="search"><img src="./dashboard_files/search.png" id="sicon">
+ 			</div>
+ 		<div>
+ 			<img src="logo.png" id="logo">
+ 		</div>
+ 	</div>
+
+ 	<a href="index.html" id="prof">Log out</a>
+
+ 	<br>
+ 	<h3>Reservation Type</h3>
+ 	<div id="mpc"><canvas id="myPieChart" width="300" height="300" style="display: block; box-sizing: border-box; height: 300px; width: 300px;"></canvas></div>
+
+ 	<div id="ari">
+ 			<p id="num">93</p>
+ 			<p id="txt">Expected Arrival</p>
+ 	</div>
+
+ 	<div id="dep">
+ 			<p id="num2">68</p>
+ 			<p id="txt2">Expected Departure</p>
+ 	</div>
+
+  <script>
+    var ctx = document.getElementById('myPieChart').getContext('2d');
+    var myPieChart = new Chart(ctx, {
+      type: 'pie',
+      data: {
+        labels: ['Long Term Stay (25%)', 'Bundle Package (25%)', 'Single Service (50%)'], 
+        datasets: [{
+          data: [25, 25, 50],
+          backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'], 
+        }]
+      },
+
+    options: {
+        responsive: false,  
+        maintainAspectRatio: false, 
+    }
+    });
+  </script>
+
+ 
+
+</body></html>

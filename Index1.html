@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Homepage</title>
+<style type="text/css">
+	body{
+		background-color: #8f7a67;
+	}
+
+	#blue{
+		background:#f0d5bb;
+		height: 100px;
+		margin-left: -10px;
+		margin-top: -10px;
+		margin-right: -10px;
+		width: 105%;
+		position: fixed;
+		z-index: 1;
+	}
+
+	.top{
+		position: fixed;
+	}
+
+	#logo{
+		width: 270px;
+		height: 130px;
+		margin-left: 50px;
+		margin-top: -15px;
+
+	}
+
+	a{
+		padding: 90px;
+		color: black;
+		text-decoration: none;
+	}
+
+	.navi{
+		margin-left: 600px;
+		margin-top: -80px;
+		font-weight: bold;
+		font-size: 20px;
+		text-transform: uppercase;
+	}
+
+	#search{
+		float: right;
+		margin-right: 300px;
+		margin-top: -20px;
+		text-align: center;
+		border-radius: 20px;
+	}
+
+	#log{
+		position: absolute;
+		width: 55px;
+		margin-left:1650px;
+		margin-top: -22px;
+		border-radius: 10px;
+		font-size: 15px;
+		font-family: serif;
+		height: 25px;
+	
+	}
+
+	#login{
+		color: white;
+	}
+
+	#ser{
+		position: absolute;
+		width: 20px;
+		height: 18px;
+		margin-top: -18px;
+		margin-left: 1530px;
+	}
+
+	#li{
+		margin-right: 70px;
+	}
+
+	* {box-sizing: border-box}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 100px;
+ box-shadow: 3px 3px 13px 3px black;
+
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+#img1{
+	background-color: white;
+	box-shadow: 3px 3px 3px 3px #d6d2d2;
+	width: 350px;
+	height: 450px;
+	margin-left: 150px;
+	box-shadow: 3px 3px 13px 3px black;
+	border-radius: 30px;
+}
+
+#bed{
+	height: 200px;
+	margin-left: 20px;
+	margin-top: 10px;
+	box-shadow: 3px 3px 3px 3px #d6d2d2;
+	border-radius: 30px;
+
+}
+
+#img2{
+	background-color: white;
+	position: absolute;
+	width: 350px;
+	margin-top: -450px;
+	margin-left: 570px;
+	height: 450px;
+	box-shadow: 3px 3px 13px 3px black;
+	border-radius: 30px;
+}
+
+#food{
+	height: 200px;
+	margin-left: 20px;
+	margin-top: 10px;
+	box-shadow: 3px 3px 3px 3px #d6d2d2;
+	border-radius: 30px;
+}
+
+#img3{
+	background-color: white;
+	position: absolute;
+	width: 350px;
+	margin-top: -450px;
+	margin-left: 985px;
+	height: 450px;
+	box-shadow: 3px 3px 13px 3px black;
+	border-radius: 30px;
+}
+
+#housekeeping{
+	height: 200px;
+	margin-left: 20px;
+	margin-top: 10px;
+	box-shadow: 3px 3px 3px 3px #d6d2d2;
+	border-radius: 30px;
+}
+
+#img4{
+	background-color: white;
+	position: absolute;
+	width: 350px;
+	margin-top: -450px;
+	margin-left: 1400px;
+	height: 450px;
+	box-shadow: 3px 3px 13px 3px black;
+	border-radius: 30px;
+}
+
+#hall{
+	height: 200px;
+	width: 300px;
+	margin-left: 25px;
+	margin-top: 10px;
+	box-shadow: 3px 3px 3px 3px #d6d2d2;
+	border-radius: 30px;
+}
+
+h2{
+	margin-left: 90px;
+}
+
+#text1{
+	margin-left: 70px;
+}
+
+#img5{
+	background-color: white;
+	position: absolute;
+	width: 350px;
+	margin-top: 40px;
+	margin-left: 350px;
+	height: 450px;
+	box-shadow: 3px 3px 13px 3px black;
+	border-radius: 30px;
+}
+
+#member{
+	height: 200px;
+	width: 300px;
+	margin-left: 25px;
+	margin-top: 10px;
+	box-shadow: 3px 3px 3px 3px #d6d2d2;
+	border-radius: 30px;
+}
+
+#img6{
+	background-color: white;
+	position: absolute;
+	width: 350px;
+	margin-top: 40px;
+	margin-left: 780px;
+	height: 450px;
+	box-shadow: 3px 3px 13px 3px black;
+	border-radius: 30px;
+}
+
+#other{
+	height: 200px;
+	width: 300px;
+	margin-left: 25px;
+	margin-top: 10px;
+	box-shadow: 3px 3px 3px 3px #d6d2d2;
+	border-radius: 30px;
+}
+
+.text{
+	color: black;
+}
+
+#prof{
+	position: absolute;
+	height: 40px;
+	margin-left: 1600px;
+	margin-top: -30px;
+	}
+
+#book{
+	width: 200px;
+	margin-left: 1200px;
+	margin-top: 220px;
+	border-radius: 20px;
+}
+
+#click{
+	height: 80px;
+	margin-left: 90px;
+}
+
+#ytube{
+	border-radius: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+}
+
+#map{
+	border-radius: 20px;
+	margin-left: 20px;
+	margin-top: 20px;
+	height: 300px;
+}
+
+.vid{
+	border-radius: 20px;
+	background-color: white;
+	width: 600px;
+	height: 350px;
+	margin-top: 250px;
+	margin-left: 300px;
+	box-shadow: 3px 3px 13px 3px black;
+}
+
+.mapa{
+	position: absolute;
+	background-color: white;
+	width: 650px;
+	height: 350px;
+	border-radius: 20px;
+	margin-left: 950px;
+	margin-top: -350px;
+	box-shadow: 3px 3px 13px 3px black;
+}
+
+#clickR{
+	height: 80px;
+	margin-left: 100px;
+}
+
+#clickL{
+	margin-top: -17px;
+	height: 80px;
+	margin-left: 100px;
+}
+
+#contact{
+	background-color: #f0d5bb;
+	margin-left: -10px;
+	margin-right: -10px;
+	height: 300px;
+}
+
+h1{
+	position: absolute;
+	margin-left: 60px;
+	margin-top: 20px;
+}
+
+#fb{
+	position: absolute;
+	height: 30px;
+	margin-top: 70px;
+	margin-left: 60px;
+}
+
+#mail{
+	height: 30px;
+	position: absolute;
+	margin-top: 70px;
+	margin-left: 120px;
+}
+
+#yt{
+	height: 30px;
+	position: absolute;
+	margin-top: 70px;
+	margin-left: 180px;
+}
+
+#tiktok{
+	height: 30px;
+	position: absolute;
+	margin-top: 70px;
+	margin-left: 240px;
+}
+
+#Ls{
+	position: absolute;
+	text-align: justify;
+	margin-top: 20px;
+	margin-left: 400px;
+	margin-right: 1200px;
+}
+
+#Ls2{
+	position: absolute;
+	text-align: justify;
+	margin-top: 20px;
+	margin-left: 900px;
+	margin-right: 700px;
+}
+
+#Ls3{
+	position: absolute;
+	text-align: justify;
+	margin-top: 20px;
+	margin-left: 1400px;
+	margin-right: 200px;
+}
+
+#blogo{
+	margin-top: 80px;
+	margin-left: -140px;
+}
+
+P{
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<div id="blue" class="top"><a href="Index1.html"><img src="logo.png" id="logo"></a>
+		<div class="navi"><a href="Index.html">Home</a>
+			<a href="aboutus.html">About Us</a>
+			<a href="services.html">Services</a></div>
+		<div><img src="search.png" id="ser"></div>
+		<div><img src="profile.png" id="prof"></div>
+		<div><input type="text" placeholder="search" id="search"></div>
+		<button onclick="log()" id="log">Login<a href="login.html" id="li"></a></button>
+	</div>
+<br><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="main.webp" style="width:100%">
+  <div class="text">The Hotel</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="main.jpeg" style="width:100%">
+  <div class="text">Main Hall</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="room.jpg" style="width:100%">
+  <div class="text">Room</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<br><br>
+
+<div id="img1"><img src="hotel2.jpg" id="bed"><br>
+				<h2 id="text1">Room Reservations</h2>
+		<ul>
+		  <li><strong>Room Availability Checking:</strong> Real-time updates on available rooms.</li>
+		  <li><strong>Room Types:</strong> Options like single, double, deluxe, suite, etc.</li>
+		</ul>
+
+		<img src="click.png" id="click">
+</div>
+	<div id="img2"><img src="food.avif" id="food"><br>
+				<h2>Dining Services</h2>
+		<ul>
+		  <li><strong>Restaurant Reservations:</strong> Book tables at on-site restaurants.</li>
+		  <li><strong>Meal Plans:</strong> Choose packages like bed & breakfast, half-board, or full-board.</li>
+		</ul>
+
+		<img src="click.png" id="click">
+			</div>
+	<div id="img3"><img src="hk.avif" id="housekeeping"><br>
+				<h2>Guest Services</h2>
+			<ul>
+		  <li><strong>Housekeeping Requests:</strong> Schedule room cleaning or request extra towels and toiletries.</li>
+		  <li><strong>Room Service:</strong> Food and beverages delivered to rooms.</li>
+		</ul>
+
+		<img src="click.png" id="click">
+		</div>
+	<div id="img4"><img src="hall.avif" id="hall"><br>
+				<h2>Event Reservation</h2>
+			<ul>
+		  <li><strong>Banquet Halls:</strong> Book spaces for weddings, parties, or corporate events.</li>
+		  <li><strong>Event Planning:</strong> Assistance with organizing decorations, catering, and entertainment.</li>
+		</ul>
+
+		<img src="click.png" id="clickR">
+		</div>
+	<div id="img5"><img src="member.jpg" id="member"><br>
+				<h2>Loyalty Programs</h2>
+				<ul>
+		  <li><strong>Rewards System:</strong> Offer points for each stay that can be redeemed later.</li>
+		  <li><strong>Membership Tiers:</strong> Provide perks like free upgrades or late check-outs for frequent visitors.</li>
+		</ul>
+			
+			<img src="click.png" id="clickL">
+		</div>
+	<div id="img6"><img src="untitled (1).png" id="other"><br>
+				<h2>Other Services</h2>
+				<ul>
+		  <li><strong>Book pick-up and drop-off.</strong></li>
+		  <li><strong>Resort/Pool</strong></li>
+		  <li><strong>Spa Appointments:</strong> Schedule massages or beauty treatments.</li>
+		</ul>
+
+		<a href="services.html"><img src="click.png" id="click"></a>
+		</div>
+	<a href="login.html"><img src="book.png" id="book"></a>
+	<br><br>
+
+	<div class="vid"><iframe width="560" height="315" src="https://www.youtube.com/embed/OKuKhF0wEcw?si=925HzufqvMQ6qZ9M" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen id="ytube"></iframe></div>
+
+	<div class="mapa"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30894.676757514186!2d120.98115966224829!3d14.551449588619993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397ca2b8743721d%3A0xc7021b7eb1fa7ff3!2sDiamond%20Hotel%20Philippines!5e0!3m2!1sen!2sph!4v1732841980213!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe></div>
+
+	<br>
+	<br>
+
+	<div id="contact">
+		<h1>Conect With Us</h1>
+		<img src="fb.png" id="fb"><img src="email.png" id="mail"><img src="tiktok.png" id="tiktok"><img src="yt.png" id="yt">
+
+		<div class="legal-section" id="Ls">
+        <h2>Privacy Policy</h2>
+        <p>"We value your privacy and are committed to protecting your personal information. This website collects and uses data solely for the purposes of enhancing user experience, processing reservations, and providing tailored services. All data is stored securely and will never be shared with third parties without your consent, except as required by law. For more details, please read our full <a href="privacy.html">Privacy Policy</a>."</p>
+    </div>
+
+    
+    <div class="legal-section" id="Ls2">
+        <h2>Terms of Service</h2>
+        <p>"By using this website, you agree to comply with our terms and conditions. These include adhering to booking policies, respecting payment deadlines, and ensuring accurate information during the reservation process. We reserve the right to modify these terms at any time, with updates reflected on this page. For further information, please refer to our full <a href="terms.html">Terms of Service</a>."</p>
+    </div>
+
+    
+    <div class="legal-section" id="Ls3">
+        <h2>Cookie Policy</h2>
+        <p>"This website uses cookies to provide you with a personalized browsing experience. Cookies help us understand how you interact with our site, allowing us to improve functionality and services. By continuing to browse, you consent to the use of cookies. To learn more or manage your preferences, see our full <a href="cookies.html">Cookie Policy</a>."</p>
+    </div>
+
+    <a href="index1.html"><img src="logo.png" id="blogo"></a>
+		<p>© 2024 QUICKRESERVE. Ready to book your dream stay? | Contact us: +123 456 7890 </p>
+	</div>
+
+<script type="text/javascript">
+	let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</body>
+</html>
